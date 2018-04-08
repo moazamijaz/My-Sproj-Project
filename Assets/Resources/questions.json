@@ -1,0 +1,277 @@
+{
+  "Questions" :[
+      {
+        "Q_id": "1",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "1. Does s/he join in playing games with other children easily?"
+      },
+      {
+        "Q_id": "2",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "2. Does s/he come up to you spontaneously for a chat?"
+      },
+      {
+        "Q_id": "3",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "3. Was s/he speaking by 2 years old?"
+      },
+      {
+        "Q_id": "4",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "4. Does s/he enjoy sports?"
+      },
+      {
+        "Q_id": "5",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "5. Is it important to him/her to fit in with the peer group?"
+      },
+      {
+        "Q_id": "6",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "6. Does s/he appear to notice unusual details that others miss?"
+      },
+      {
+        "Q_id": "7",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "7. Does s/he tend to take things literally?"
+      },
+      {
+        "Q_id": "8",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "8. When s/he was 3 years old, did s/he spend a lot of time pretending (e.g., play-acting being a superhero, or holding teddys tea parties)?"
+      },
+      {
+        "Q_id": "9",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "9. Does s/he like to do things over and over again, in the same way all the time?"
+      },
+      {
+        "Q_id": "10",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "10. Does s/he find it easy to interact with other children?"
+      },
+      {
+        "Q_id": "11",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "11. Can s/he keep a two-way conversation going?"
+      },
+      {
+        "Q_id": "12",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "12. Can s/he read appropriately for his/her age?"
+      },
+      {
+        "Q_id": "13",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "13. Does s/he mostly have the same interests as his/her peers?"
+      },
+      {
+        "Q_id": "14",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "14. Does s/he have an interest which takes up so much time that s/he does little else?"
+      },
+      {
+        "Q_id": "15",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "15. Does s/he have friends, rather than just acquaintances?"
+      },
+      {
+        "Q_id": "16",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "16. Does s/he often bring you things s/he is interested in to show you?"
+      },
+      {
+        "Q_id": "17",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "17. Does s/he enjoy joking around?"
+      },
+      {
+        "Q_id": "18",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "18. Does s/he have difficulty understanding the rules for polite behavior?"
+      },
+      {
+        "Q_id": "19",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "19. Does s/he appear to have an unusual memory for details?"
+      },
+      {
+        "Q_id": "20",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "20. Is his/her voice unusual (e.g., overly adult, flat, or very monotonous)?"
+      },
+      {
+        "Q_id": "21",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "21. Are people important to him/her?"
+      },
+      {
+        "Q_id": "22",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "22. Can s/he dress him/herself?"
+      },
+      {
+        "Q_id": "23",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "23. Is s/he good at turn-taking in conversation?"
+      },
+      {
+        "Q_id": "24",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "24. Does s/he play imaginatively with other children, and engage in role-play?"
+      },
+      {
+        "Q_id": "25",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "25. Does s/he often do or say things that are tactless or socially inappropriate?"
+      },
+      {
+        "Q_id": "26",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "26. Can s/he count to 50 without leaving out any numbers?"
+      },
+      {
+        "Q_id": "27",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "27. Does s/he make normal eye-contact?"
+      },
+      {
+        "Q_id": "28",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "28. Does s/he have any unusual and repetitive movements?"
+      },
+      {
+        "Q_id": "29",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "29. Is his/her social behaviour very one-sided and always on his/her own terms?"
+      },
+      {
+        "Q_id": "30",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "30. Does s/he sometimes say “you” or “s/he” when s/he means “I”?"
+      },
+      {
+        "Q_id": "31",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "31. Does s/he prefer imaginative activities such as play-acting or story-telling, rather than numbers or lists of facts?"
+      },
+      {
+        "Q_id": "32",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "32. Does s/he sometimes lose the listener because of not explaining what s/he is talking about?"
+      },
+      {
+        "Q_id": "33",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "33. Can s/he ride a bicycle (even if with stabilizers)?"
+      },
+      {
+        "Q_id": "34",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "34. Does s/he try to impose routines on him/herself, or on others, in such a way that it causes problems?"
+      },
+      {
+        "Q_id": "35",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "35. Does s/he care how s/he is perceived by the rest of the group?"
+      },
+      {
+        "Q_id": "36",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "36. Does s/he often turn conversations to his/her favorite subject rather than following what the other person wants to talk about?"
+      },
+      {
+        "Q_id": "37",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "37. Does s/he have odd or unusual phrases?"
+      },
+      {
+        "Q_id": "38",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "38. Have teachers/health visitors ever expressed any concerns about his/her development?"
+      },
+      {
+        "Q_id": "39",
+        "Q_Stid": "1",
+        "Q_type": "radio",
+        "Q_values": ["Yes","No"],
+        "Q_text": "39. Has s/he ever been diagnosed with any of the following: Language delay, ADHD, hearing or visual difficulties, Autism Spectrum Condition (including Asperger’s Syndrome, or a physical disability)?"
+      }
+    ]
+}
