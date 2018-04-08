@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44658017, g: 0.49641502, b: 0.57482153, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657886, g: 0.4964127, b: 0.57481724, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -886,6 +886,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1542149823}
+--- !u!114 &1549645455 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114500322557406938, guid: be1d9ca0b9061594eb11c2b7decf3b55,
+    type: 2}
+  m_PrefabInternal: {fileID: 1640158384}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1580442870
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,7 +997,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 58}
+  m_AnchoredPosition: {x: -120, y: 58.675}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600562413
@@ -1204,8 +1210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a1622c447066f4dad98e4da9f377db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Question: {fileID: 0}
+  Question: {fileID: 1549645455}
   myPanel: {fileID: 695582731}
+  Tgroup: {fileID: 1600562413}
 --- !u!1 &1758459740
 GameObject:
   m_ObjectHideFlags: 0
