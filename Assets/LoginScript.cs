@@ -33,9 +33,8 @@ public class LoginScript : MonoBehaviour {
 		WWWForm form = new WWWForm ();
 		//validate input
 		if (MyValidate_email (email.text) != false) {
-			form.AddField ("username", email.text);
 			form.AddField ("password", password.text);
-
+			form.AddField ("email", email.text);
 			www = new WWW (POSTAddUserURL, form);
 			StartCoroutine (WaitForRequest (www));
 
@@ -60,6 +59,25 @@ public class LoginScript : MonoBehaviour {
 		else
 		{
 			Debug.Log("WWW Request: " + data.text);
+			if (data.text == "please fill all values") {
+			
+			} else if (data.text == "wrong credentials") {
+				
+			} else {
+				Debug.Log ("data: " + data.text);
+				string msg = data.text;
+				int i = 0;
+				while (msg [i] != ':') {
+					i++;
+				}
+				//Debug.Log (msg [i]);
+				i++;
+				string temp="";
+				while (msg [i] != '.') {
+					temp = temp + msg [i];
+				}
+				Debug.Log (temp);
+			}
 		}
 	}
 
