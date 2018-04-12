@@ -63,7 +63,7 @@ public class LoginScript : MonoBehaviour {
 			
 			} else if (data.text == "wrong credentials") {
 				
-			} else if (data.text[1] =='v') {
+			} else if (data.text[0] =='v') {
 				Debug.Log ("data: " + data.text);
 				string msg = data.text;
 				int i = 0;
@@ -75,6 +75,7 @@ public class LoginScript : MonoBehaviour {
 				string temp="";
 				while (msg [i] != '.') {
 					temp = temp + msg [i];
+					Debug.Log (temp);
 					break;
 				}
 				Debug.Log (temp);

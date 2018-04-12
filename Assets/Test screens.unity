@@ -689,8 +689,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: getValues
+      - m_Target: {fileID: 1722324119}
+        m_MethodName: loadprev
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -988,9 +988,13 @@ MonoBehaviour:
   Question: {fileID: 1549645455}
   myPanel: {fileID: 695582731}
   Tgroup: {fileID: 1600562413}
-  togglelist: []
   toggleResponses: []
   textResponses: []
+  webresponse: 
+  q_id: 
+  test_id: 
+  q_type: 
+  button_id: 0
 --- !u!1 &1758459740
 GameObject:
   m_ObjectHideFlags: 0
