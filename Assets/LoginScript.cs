@@ -13,6 +13,7 @@ public class LoginScript : MonoBehaviour {
 
 	public Text email;
 	public InputField password;
+	public static string userid;
 
 	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/login.php";
 	// Use this for initialization
@@ -75,10 +76,14 @@ public class LoginScript : MonoBehaviour {
 				string temp="";
 				while (msg [i] != '.') {
 					temp = temp + msg [i];
-					Debug.Log (temp);
-					break;
+					i++;
+					if (i >= msg.Length) {
+						break;
+					}
 				}
 				Debug.Log (temp);
+				userid = temp;
+				SceneManager.LoadScene (4);
 			}
 		}
 	}
