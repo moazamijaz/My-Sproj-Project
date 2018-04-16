@@ -46,7 +46,7 @@ public class AddChild : MonoBehaviour {
 		WWWForm form = new WWWForm ();
 
 		form.AddField ("id", cnic.text);
-		form.AddField ("uid", SignUpController.myid); //add login id later
+		form.AddField ("uid", LoginScript.userid); //add login id later
 		form.AddField ("name", name.text);
 		form.AddField ("gender", g);
 		form.AddField ("age", age.text);
