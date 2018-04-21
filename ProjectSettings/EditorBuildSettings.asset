@@ -26,3 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Test screens.unity
     guid: dc9d003a9847ce140b214b65b8199af9
+  - enabled: 1
+    path: Assets/View Children.unity
+    guid: 39f34c271dfd8bb4987b4a58fbf64253
