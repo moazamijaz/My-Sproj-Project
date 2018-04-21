@@ -28,7 +28,7 @@ public class homescreen : MonoBehaviour {
 	}
 
 	public void Children(){
-
+		SceneManager.LoadScene (7);
 	}
 
 	public void AccountSettings(){
