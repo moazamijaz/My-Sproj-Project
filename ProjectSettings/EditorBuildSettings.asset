@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/View Children.unity
     guid: 39f34c271dfd8bb4987b4a58fbf64253
+  - enabled: 1
+    path: Assets/Child info.unity
+    guid: 9b63639719ad1eb498a4686f9ab4cb7f
