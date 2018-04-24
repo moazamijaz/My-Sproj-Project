@@ -11,7 +11,7 @@ public class childrenscript : MonoBehaviour {
 
 	// Use this for initialization
 	public Transform myPanel;
-	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/ChildInfo.php";
+	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/returnAllChildern.php";
 	void Start () {
 		loadchildren ();
 	}
@@ -24,13 +24,15 @@ public class childrenscript : MonoBehaviour {
 	public void loadchildren(){
 		WWW www;
 		WWWForm form = new WWWForm ();
-		form.AddField ("uid", LoginScript.userid);
+		form.AddField ("uid", 37); //LoginScript.userid
 		www = new WWW (POSTAddUserURL, form);
 		StartCoroutine (WaitForRequest (www));
-
+		/*
 		for (int i = 0; i < 50; i++) {
 			Button T = (Button)Instantiate (Resources.Load ("Child Button", typeof(Button)), myPanel);
 		}
+		*/
+
 	}
 
 	IEnumerator WaitForRequest(WWW data)
@@ -43,6 +45,14 @@ public class childrenscript : MonoBehaviour {
 		else
 		{
 			Debug.Log("WWW Request: " + data.text);
+			string[] children = data.text.Split(new[]{"<br>"},StringSplitOptions.None);
+			foreach (string child in children) {
+				string[] Details = child.Split ('-');
+				foreach (string detail in Details) {
+					string[] kaam = detail.Split (':');
+					Debug.Log (kaam [1]);
+				}
+			}
 
 		}
 	}
