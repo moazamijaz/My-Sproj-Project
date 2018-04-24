@@ -75,4 +75,8 @@ public class AddChild : MonoBehaviour {
 			}
 		}
 	}
+
+	public void GoBack(){
+		SceneManager.LoadScene (4);
+	}
 }
