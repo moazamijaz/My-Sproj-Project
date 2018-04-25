@@ -13,6 +13,7 @@ public class childrenscript : MonoBehaviour {
 	// Use this for initialization
 	public Transform myPanel;
 	public static string cid;
+	public static string uid=LoginScript.userid;
 	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/returnAllChildern.php";
 	void Start () {
 		loadchildren ();
@@ -26,7 +27,7 @@ public class childrenscript : MonoBehaviour {
 	public void loadchildren(){
 		WWW www;
 		WWWForm form = new WWWForm ();
-		form.AddField ("uid", 37); //LoginScript.userid
+		form.AddField ("uid", uid); //LoginScript.userid
 		www = new WWW (POSTAddUserURL, form);
 		StartCoroutine (WaitForRequest (www));
 	}
@@ -78,5 +79,9 @@ public class childrenscript : MonoBehaviour {
 				T.onClick.AddListener (()=>buttonclick(T));
 			}
 		}
+	}
+
+	public void GoBack(){
+		SceneManager.LoadScene (4);
 	}
 }
