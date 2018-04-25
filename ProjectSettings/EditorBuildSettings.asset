@@ -32,3 +32,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Child info.unity
     guid: 9b63639719ad1eb498a4686f9ab4cb7f
+  - enabled: 1
+    path: Assets/Tests.unity
+    guid: f934c76f8170c0c4ea4891e71cebf9f7
+  - enabled: 1
+    path: Assets/Activities.unity
+    guid: eaeb1833cbf75344ea543d706441cd4d
+  - enabled: 1
+    path: Assets/5-1.unity
+    guid: 997822c3a22d34d46ab6025034a4325c
+  - enabled: 1
+    path: Assets/activity 5 instructions.unity
+    guid: 4a38c346a6973164b8d5c11539b9b155
+  - enabled: 1
+    path: Assets/5-2.unity
+    guid: d3ad0f195c5ce4c46a68c81816cd1bb8
+  - enabled: 1
+    path: Assets/5-results.unity
+    guid: cf6864b08a6816d45af78efa569df2a1

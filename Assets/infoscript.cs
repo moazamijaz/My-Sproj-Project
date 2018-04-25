@@ -27,6 +27,14 @@ public class infoscript : MonoBehaviour {
 		SceneManager.LoadScene (7);
 	}
 
+	public void loadTests(){
+		SceneManager.LoadScene (9);
+	}
+
+	public void loadActivities(){
+		SceneManager.LoadScene (10);
+	}
+
 	public void loadchild(){
 		WWW www;
 		WWWForm form = new WWWForm ();

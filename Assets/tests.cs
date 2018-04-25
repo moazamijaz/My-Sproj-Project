@@ -24,6 +24,10 @@ public class tests : MonoBehaviour {
 		
 	}
 
+	public void GoBack(){
+		SceneManager.LoadScene (8);
+	}
+
 	public void testid(){
 		b_id = t_button.name;
 		WWW www;
@@ -44,6 +48,10 @@ public class tests : MonoBehaviour {
 		{
 			Debug.Log("WWW Request: " + data.text);
 		}
+	}
+
+	public void mchats(){
+		SceneManager.LoadScene (6);
 	}
 
 }
