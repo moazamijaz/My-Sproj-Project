@@ -34,6 +34,7 @@ public class managerActivity6 : MonoBehaviour {
 			//submit your score for activity 6
 			//and move the scene to menu
 			Debug.Log("move now");
+
 		}
 
 

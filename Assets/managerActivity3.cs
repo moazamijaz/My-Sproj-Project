@@ -8,6 +8,10 @@ public class managerActivity3 : MonoBehaviour {
 	public static int score;
 	public GameObject[] sets;
 	public GameObject starter;
+	public static string cid=infoscript.cid;
+	public static string uid=LoginScript.userid;
+	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/returnAllChildern.php";
+
 
 	private int curr, count;
 
@@ -49,7 +53,8 @@ public class managerActivity3 : MonoBehaviour {
 			Debug.Log ("Your current Score is : " + score);
 		} else {
 			sets[curr].SetActive (false);
-			starter.SetActive (true);
+			//starter.SetActive (true);
+			endGame();
 		}
 
 		count++;
@@ -68,6 +73,10 @@ public class managerActivity3 : MonoBehaviour {
 
 		GetRandomSet ();
 		starter.SetActive (false);
+	}
+
+	public void endGame(){
+		Debug.Log("Game Ended with score"+score);
 	}
 
 
