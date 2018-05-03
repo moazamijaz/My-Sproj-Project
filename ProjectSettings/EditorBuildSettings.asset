@@ -38,15 +38,30 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Activities.unity
     guid: eaeb1833cbf75344ea543d706441cd4d
-  - enabled: 1
-    path: Assets/5-1.unity
-    guid: 997822c3a22d34d46ab6025034a4325c
-  - enabled: 1
-    path: Assets/activity 5 instructions.unity
-    guid: 4a38c346a6973164b8d5c11539b9b155
-  - enabled: 1
+  - enabled: 0
     path: Assets/5-2.unity
     guid: d3ad0f195c5ce4c46a68c81816cd1bb8
   - enabled: 1
     path: Assets/5-results.unity
     guid: cf6864b08a6816d45af78efa569df2a1
+  - enabled: 1
+    path: Assets/activity_3.unity
+    guid: 457bf071c3868e242b5e2a278e9ea1bc
+  - enabled: 1
+    path: Assets/activity_5.unity
+    guid: 997822c3a22d34d46ab6025034a4325c
+  - enabled: 1
+    path: Assets/activity_6.unity
+    guid: f66844def8e76f147b5507246b34a406
+  - enabled: 1
+    path: Assets/activity_7.unity
+    guid: d36b6d62e54993546a6f06591755bb39
+  - enabled: 1
+    path: Assets/activity_9.unity
+    guid: bffa752ddc4adf4488f6fc3e1af56b07
+  - enabled: 1
+    path: Assets/activity_10.unity
+    guid: fddf8e73c08390c43b3ab78856a4176e
+  - enabled: 1
+    path: Assets/Activity instructions.unity
+    guid: 4f3c322bae3cbf542921f7d74ca83832

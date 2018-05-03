@@ -12,7 +12,7 @@ public class tests : MonoBehaviour {
 	public string b_id;
 	public Button t_button;
 	public static string testdata;
-	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/signup.php";
+	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/ScreeningTest.php";
 
 	// Use this for initialization
 	void Start () {
