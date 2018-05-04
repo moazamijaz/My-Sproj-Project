@@ -6,11 +6,11 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 public class tests : MonoBehaviour {
 
 	public string b_id;
-	public Button t_button;
 	public static string testdata;
 	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/ScreeningTest.php";
 
@@ -24,15 +24,18 @@ public class tests : MonoBehaviour {
 		
 	}
 
+
+
 	public void GoBack(){
 		SceneManager.LoadScene (8);
 	}
+		
 
-	public void testid(){
+	public void testid(Button t_button){
 		b_id = t_button.name;
 		WWW www;
 		WWWForm form = new WWWForm ();
-		form.AddField ("Stid", b_id);
+		form.AddField ("St_id", b_id);
 		www = new WWW (POSTAddUserURL, form);
 		StartCoroutine (WaitForRequest (www));
 	}
@@ -47,11 +50,9 @@ public class tests : MonoBehaviour {
 		else
 		{
 			Debug.Log("WWW Request: " + data.text);
+			testdata = data.text;
+			SceneManager.LoadScene (6);
 		}
 	}
-
-	public void mchats(){
-		SceneManager.LoadScene (6);
-	}
-
+		
 }
