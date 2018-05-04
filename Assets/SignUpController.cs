@@ -27,8 +27,12 @@ public class SignUpController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+	public void goBack () {
+		SceneManager.LoadScene ("login");
+	}
+
 	void Update () {
-		
+
 	}
 
 	public void getValues()
