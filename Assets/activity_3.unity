@@ -2307,6 +2307,7 @@ MonoBehaviour:
   - {fileID: 1535405052}
   - {fileID: 251097331}
   starter: {fileID: 1120475471}
+  myPanel: {fileID: 240660317}
 --- !u!4 &1908614130
 Transform:
   m_ObjectHideFlags: 0
