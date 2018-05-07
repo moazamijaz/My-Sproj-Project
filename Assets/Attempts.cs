@@ -11,10 +11,11 @@ using System.Linq;
 public class Attempts : MonoBehaviour {
 
 	// Use this for initialization
-	private string b_id;
+	public static string b_id;
 	public static string cid=infoscript.cid;
 	public static string uid=homescreen.userid;
-	public static string Attemptnumber;
+	public static string Attemptstring;
+	public static int A_number;
 	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/attemptReturn.php";
 	void Start () {
 		Debug.Log ("button pressed!");
@@ -46,18 +47,18 @@ public class Attempts : MonoBehaviour {
 		if (data.error != null)
 		{
 			Debug.Log("There was an error sending request: " + data.error);
+			StartCoroutine (WaitForRequest (data));
+
 		}
 		else
 		{
 			Debug.Log("WWW Request: " + data.text);
-			Attemptnumber = data.text;
-			string[] temp= Attemptnumber.Split (':');
-			Debug.Log (temp [1]);
-			//SceneManager.LoadScene ("");
+			Attemptstring = data.text;
+			string[] temp= Attemptstring.Split (':');
+			//Debug.Log (temp [1]);
+			A_number = Convert.ToInt32 (temp [1]);
+			SceneManager.LoadScene ("Test results display");
 		}
 	}
-
-	public void test(){
-		Debug.Log ("tarara");
-	}
+		
 }

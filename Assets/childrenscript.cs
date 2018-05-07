@@ -45,7 +45,7 @@ public class childrenscript : MonoBehaviour {
 		if (data.error != null)
 		{
 			Debug.Log("There was an error sending request: " + data.error);
-			//StartCoroutine (WaitForRequest (data));
+			StartCoroutine (WaitForRequest (data));
 		}
 		else
 		{

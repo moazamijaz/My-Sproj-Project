@@ -56,13 +56,15 @@ public class LoginScript : MonoBehaviour {
 		if (data.error != null)
 		{
 			Debug.Log("There was an error sending request: " + data.error);
+			StartCoroutine (WaitForRequest (data));
+
 		}
 		else
 		{
 			Debug.Log("WWW Request: " + data.text);
-			if (data.text == "please fill all values") {
+			if (data.text == "please fill all values") {//take care
 			
-			} else if (data.text == "wrong credentials") {
+			} else if (data.text == "wrong credentials") {//take care
 				
 			} else if (data.text[0] =='v') {
 				Debug.Log ("data: " + data.text);
