@@ -31,6 +31,10 @@ public class infoscript : MonoBehaviour {
 		SceneManager.LoadScene (9);
 	}
 
+	public void loadResults(){
+		SceneManager.LoadScene ("results");
+	}
+
 	public void loadActivities(){
 		SceneManager.LoadScene (10);
 	}
