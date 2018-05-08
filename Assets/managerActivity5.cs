@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 public class managerActivity5 : MonoBehaviour {
 
 	public GameObject[] animals;
 	public GameObject instructions;
 	public ToggleGroup Tgroup;
+	public Transform qPanel;
 	public Transform myPanel;
 	private int count;
 	// Use this for initialization
@@ -28,12 +30,21 @@ public class managerActivity5 : MonoBehaviour {
 
 	public void next (){
 		Debug.Log ("count: "+count);
+		if (Tgroup.ActiveToggles().Count()>0) {
+			Debug.Log ("Active Toggles: " + Tgroup.ActiveToggles ().Count ());
+			count++;
+		}
+		GameObject.Destroy (GameObject.Find("Yes"));
+		GameObject.Destroy (GameObject.Find("No"));
+		GameObject.Destroy (GameObject.Find("qtext"));
+
 		if (count < 5) {
 			if (count == 0) {
 				animals [0].SetActive (false);
 				instructions.SetActive(true);
+				count++;
 			}
-			if (count == 1) {
+			else if (count == 1) {
 				animals [0].SetActive (false);
 				animals [1].SetActive (false);
 				animals [2].SetActive (false);
@@ -41,6 +52,8 @@ public class managerActivity5 : MonoBehaviour {
 				instructions.SetActive(false);
 				//take input
 				Vector3 temp=new Vector3(0,0,0);
+				Text qtext = (Text) Instantiate (Resources.Load ("Input Question", typeof(Text)), qPanel);
+				qtext.name="qtext";
 				Toggle T1 = (Toggle) Instantiate (Resources.Load ("myToggle", typeof(Toggle)), myPanel);
 				T1.transform.position = Tgroup.transform.position + temp;
 				T1.group = Tgroup;
@@ -54,26 +67,34 @@ public class managerActivity5 : MonoBehaviour {
 				label.text = "Yes";
 				label=T2.GetComponentInChildren<Text> ();
 				label.text = "No";
-			}
-			if (count == 2) {
+				Debug.Log ("Active Toggles: " + Tgroup.ActiveToggles ().Count ());
 				foreach (var item in Tgroup.ActiveToggles()) {
 					//var t = item.GetComponentInChildren<Text>();
 					//toggleResponses.Add (t.text);
 					Debug.Log("Response: "+item.name);
 					break;
 				}
-				GameObject.Destroy (GameObject.Find("Yes"));
-				GameObject.Destroy (GameObject.Find("No"));
+					
+			}
+			else if (count == 2) {
+				foreach (var item in Tgroup.ActiveToggles()) {
+					//var t = item.GetComponentInChildren<Text>();
+					//toggleResponses.Add (t.text);
+					Debug.Log("Response: "+item.name);
+					break;
+				}
 				animals [1].SetActive (true);
 				animals [2].SetActive (true);
 				animals [3].SetActive (true);
 				instructions.SetActive(false);
+				count++;
 			}
-			if (count == 3) {
+			else if (count == 3) {
 				animals [1].SetActive (false);
 				instructions.SetActive(true);
+				count++;
 			}
-			if (count == 4) {
+			else if (count == 4) {
 				animals [0].SetActive (false);
 				animals [1].SetActive (false);
 				animals [2].SetActive (false);
@@ -81,6 +102,8 @@ public class managerActivity5 : MonoBehaviour {
 				instructions.SetActive(false);
 				//take input
 				Vector3 temp=new Vector3(0,0,0);
+				Text qtext = (Text) Instantiate (Resources.Load ("Input Question", typeof(Text)), qPanel);
+				qtext.name="qtext";
 				Toggle T1 = (Toggle) Instantiate (Resources.Load ("myToggle", typeof(Toggle)), myPanel);
 				T1.transform.position = Tgroup.transform.position + temp;
 				T1.group = Tgroup;
@@ -94,19 +117,21 @@ public class managerActivity5 : MonoBehaviour {
 				label.text = "Yes";
 				label=T2.GetComponentInChildren<Text> ();
 				label.text = "No";
+				Debug.Log ("Active Toggles: " + Tgroup.ActiveToggles ().Count ());
+				foreach (var item in Tgroup.ActiveToggles()) {
+					//var t = item.GetComponentInChildren<Text>();
+					//toggleResponses.Add (t.text);
+					Debug.Log("Response: "+item.name);
+					break;
+				}
 			}
 			//animals [1].SetActive (true);
 			//animals [2].SetActive (false);
-			count++;
+
 			//animals [count].SetActive (false);
 
 		} else {
-			foreach (var item in Tgroup.ActiveToggles()) {
-				//var t = item.GetComponentInChildren<Text>();
-				//toggleResponses.Add (t.text);
-				Debug.Log("Response: "+item.name);
-				break;
-			}
+			
 			GameObject.Destroy (GameObject.Find("Yes"));
 			GameObject.Destroy (GameObject.Find("No"));
 
