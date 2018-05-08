@@ -13,8 +13,8 @@ public class managerActivity5 : MonoBehaviour {
 		count = -1;
 		instructions.SetActive(false);
 		animals [0].SetActive (true);
-		animals [1].SetActive (true);
-		animals [2].SetActive (true);
+		animals [1].SetActive (false);
+		//animals [2].SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -24,10 +24,10 @@ public class managerActivity5 : MonoBehaviour {
 
 	public void next (){
 
-		if (count < 3) {
+		if (count < 2) {
 			animals [0].SetActive (true);
 			animals [1].SetActive (true);
-			animals [2].SetActive (true);
+			//animals [2].SetActive (false);
 			count++;
 			animals [count].SetActive (false);
 			instructions.SetActive(true);
