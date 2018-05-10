@@ -24,11 +24,11 @@ public class homescreen : MonoBehaviour {
 	}
 
 	public void AddChild(){
-		SceneManager.LoadScene (5);
+		SceneManager.LoadScene ("Add Child");
 	}
 
 	public void Children(){
-		SceneManager.LoadScene (7);
+		SceneManager.LoadScene ("View Children");
 	}
 
 	public void AccountSettings(){

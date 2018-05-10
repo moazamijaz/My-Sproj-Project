@@ -73,12 +73,12 @@ public class AddChild : MonoBehaviour {
 
 			Debug.Log (data.text[2]);
 			if (data.text[2]=='s') {
-				SceneManager.LoadScene (4);
+				SceneManager.LoadScene ("home");
 			}
 		}
 	}
 
 	public void GoBack(){
-		SceneManager.LoadScene (4);
+		SceneManager.LoadScene ("home");
 	}
 }

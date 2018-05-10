@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Text.RegularExpressions;
+using UnityEngine.SceneManagement;
 
 public class TeacherSignup : MonoBehaviour {
 	public string userid;
@@ -83,6 +84,8 @@ public class TeacherSignup : MonoBehaviour {
 		else
 		{
 			Debug.Log("WWW Request: " + data.text);
+			SceneManager.LoadScene ("login");
+			//auto login
 		}
 	}
 }

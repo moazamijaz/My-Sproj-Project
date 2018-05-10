@@ -26,11 +26,11 @@ public class infoscript : MonoBehaviour {
 	}
 
 	public void GoBack(){
-		SceneManager.LoadScene (7);
+		SceneManager.LoadScene ("View Children");
 	}
 
 	public void loadTests(){
-		SceneManager.LoadScene (9);
+		SceneManager.LoadScene ("Tests");
 	}
 
 	public void loadResults(){
@@ -38,7 +38,7 @@ public class infoscript : MonoBehaviour {
 	}
 
 	public void loadActivities(){
-		SceneManager.LoadScene (10);
+		SceneManager.LoadScene ("Activities");
 	}
 
 	public void loadchild(){

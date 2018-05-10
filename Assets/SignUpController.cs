@@ -98,11 +98,11 @@ public class SignUpController : MonoBehaviour {
 			if (role == "Teacher") {
 				//load teacher screen
 
-				SceneManager.LoadScene(1);
+				SceneManager.LoadScene("Teacher Signup");
 			}
 			else if (role == "Parent") {
 				//load parent screen
-				SceneManager.LoadScene(2);
+				SceneManager.LoadScene("Parent Signup");
 			}
 			if (role == "Medical Professional") {
 				//load medical screen

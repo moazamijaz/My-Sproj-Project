@@ -36,7 +36,7 @@ public class childrenscript : MonoBehaviour {
 		Button button = (Button)sender;
 		cid = button.name;
 		Debug.Log ("button id: " + cid);
-		SceneManager.LoadScene (8);
+		SceneManager.LoadScene ("Child info");
 	}
 
 	IEnumerator WaitForRequest(WWW data)
@@ -82,6 +82,6 @@ public class childrenscript : MonoBehaviour {
 	}
 
 	public void GoBack(){
-		SceneManager.LoadScene (4);
+		SceneManager.LoadScene ("home");
 	}
 }
