@@ -74,3 +74,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Test results.unity
     guid: 4165d61342c010e428bcd90cec026e79
+  - enabled: 1
+    path: Assets/drag test.unity
+    guid: 72f27536b930cb3429e7e48a107704c7
+  - enabled: 1
+    path: Assets/Activities results.unity
+    guid: 040a22d069d1fde428be8b6e9311a10c
+  - enabled: 1
+    path: Assets/Activities results display.unity
+    guid: 997148fbbd390f44bbcf8b2d8c076c6b

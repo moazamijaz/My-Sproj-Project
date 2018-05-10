@@ -45,7 +45,7 @@ public class activities : MonoBehaviour {
 		} else if (id == "7") {
 			SceneManager.LoadScene (15);
 		}  else if (id == "9") {
-			SceneManager.LoadScene (16);
+			SceneManager.LoadScene ("drag test");
 		} else if (id == "10") {
 			SceneManager.LoadScene (17);
 		}

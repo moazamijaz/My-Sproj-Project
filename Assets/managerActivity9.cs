@@ -1,15 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class managerActivity9 : MonoBehaviour {
 
 
 	public static int score;
 	public static int count;
-	public static string cid=infoscript.cid;
+	public static string cid=childrenscript.cid;
 	public static string uid=LoginScript.userid;
 	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/A9.php";
+
+	public Transform myPanel;
+	public static string response = "[";
 
 	// Use this for initialization
 	void Start () {
@@ -20,10 +26,11 @@ public class managerActivity9 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (count == 5) {
-		//submit the score here
+			//submit the score here
+			Debug.Log ("Response: " + response);
 			WWW www;
 			WWWForm form = new WWWForm ();
-			form.AddField ("responseA6", "NULL");//work on this
+			form.AddField ("responseA9", response);//work on this
 			form.AddField ("Child_id", cid);
 			form.AddField ("Popinion", "NULL");
 			form.AddField ("Eopinion", "NULL");
@@ -31,14 +38,17 @@ public class managerActivity9 : MonoBehaviour {
 
 			www = new WWW (POSTAddUserURL, form);
 			StartCoroutine (WaitForRequest (www));
+			count = 0;
 			//and move the scene to menu
-			Debug.Log("move now");
+			Debug.Log ("move now");
 		
 		}
 	}
 
 	IEnumerator WaitForRequest(WWW data)
 	{
+		Text T = (Text)Instantiate (Resources.Load ("Game Over", typeof(Text)), myPanel);
+		T.text = "Game Over" + '\n' + "Score: " + score;
 		yield return data; // Wait until the download is done
 		if (data.error != null)
 		{
@@ -49,7 +59,11 @@ public class managerActivity9 : MonoBehaviour {
 		{
 			Debug.Log("WWW Request: " + data.text);
 			//testdata = data.text;
-			Invoke ("nextscene", 1.5f);
+			Invoke ("GoBack", 1.5f);
 		}
+	}
+
+	public void GoBack(){
+		SceneManager.LoadScene ("Activities");
 	}
 }

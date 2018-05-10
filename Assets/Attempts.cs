@@ -16,7 +16,9 @@ public class Attempts : MonoBehaviour {
 	public static string uid=homescreen.userid;
 	public static string Attemptstring;
 	public static int A_number;
-	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/attemptReturn.php";
+	private static string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/attemptReturn.php";
+
+
 	void Start () {
 		Debug.Log ("button pressed!");
 	}
@@ -26,13 +28,42 @@ public class Attempts : MonoBehaviour {
 		
 	}
 
-	public void testresults(){
-		SceneManager.LoadScene("Test results");
+	public void info(){
+		//infoscript.act = false;
+		SceneManager.LoadScene("Child info");
+
 	}
 
+	public void res(){
+		//infoscript.act = false;
+		SceneManager.LoadScene("results");
+
+	}
+
+	public void testresults(){
+		infoscript.act = false;
+		SceneManager.LoadScene("Test results");
+
+	}
+
+	public void Aresults(){
+		infoscript.act = true;
+		Debug.Log (infoscript.act);
+		SceneManager.LoadScene("Activities results");
+		infoscript.act = true;
+	}
 	public void testid(Button t_button){
-		Debug.Log ("button pressed!");
+		Debug.Log ("button pressed! "+t_button.name);
 		b_id = t_button.name;
+		Debug.Log ("button "+infoscript.act);
+		string temp=b_id+"Result.php";
+		Debug.Log (temp);
+		if (infoscript.act==true) {
+			POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/" + "A" + t_button.name + "Result" + ".php";
+		} else {
+			POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/attemptReturn.php";
+		}
+		Debug.Log (POSTAddUserURL);
 		WWW www;
 		WWWForm form = new WWWForm ();
 		form.AddField ("childId",cid);
@@ -56,8 +87,15 @@ public class Attempts : MonoBehaviour {
 			Attemptstring = data.text;
 			string[] temp= Attemptstring.Split (':');
 			//Debug.Log (temp [1]);
-			A_number = Convert.ToInt32 (temp [1]);
-			SceneManager.LoadScene ("Test results display");
+			if (infoscript.act==true) {
+				SceneManager.LoadScene ("Activities results display");
+
+			} else {
+				SceneManager.LoadScene ("Test results display");
+				A_number = Convert.ToInt32 (temp [1]);
+
+			}
+				
 		}
 	}
 		

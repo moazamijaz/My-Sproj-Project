@@ -40,6 +40,12 @@ public class loadresults : MonoBehaviour {
 		
 	}
 
+	public void testresults(){
+		//infoscript.act = false;
+		SceneManager.LoadScene("Test results");
+
+	}
+
 	IEnumerator WaitForRequest(WWW data)
 	{
 		yield return data; // Wait until the download is done

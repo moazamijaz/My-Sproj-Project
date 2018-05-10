@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - shape1
+  - shape3
+  - shape2
+  - shape4
+  - shape5
+  - Square
+  - Pentagon
+  - Circle
+  - Triangle
+  - Diamond
   layers:
   - Default
   - TransparentFX

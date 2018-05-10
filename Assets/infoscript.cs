@@ -14,6 +14,8 @@ public class infoscript : MonoBehaviour {
 	public Transform myPanel;
 	public static string cid = childrenscript.cid;
 	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/returnChildInfo.php";
+	public static bool act;
+
 	void Start () {
 		loadchild ();
 	}

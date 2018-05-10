@@ -819,7 +819,7 @@ GameObject:
   - component: {fileID: 1542149826}
   - component: {fileID: 1542149825}
   m_Layer: 5
-  m_Name: Back
+  m_Name: Prev
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1188,7 +1188,8 @@ MonoBehaviour:
   q_id: 
   test_id: 
   q_type: 
-  button_id: 0
+  prev: {fileID: 1542149823}
+  next: {fileID: 655157809}
 --- !u!1 &1758459740
 GameObject:
   m_ObjectHideFlags: 0
