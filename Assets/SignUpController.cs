@@ -32,7 +32,15 @@ public class SignUpController : MonoBehaviour {
 	}
 
 	void Update () {
+		if (Application.platform == RuntimePlatform.Android) {
+			if (Input.GetKey (KeyCode.Escape)) {
+				// Insert Code Here (I.E. Load Scene, Etc)
+				// OR Application.Quit();
+				goBack();
 
+				return;
+			}
+		}
 	}
 
 	public void getValues()

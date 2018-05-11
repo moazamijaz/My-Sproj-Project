@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 using System.Text.RegularExpressions;
 
 public class AddChild : MonoBehaviour {
-	public Text cnic;
+	//public Text cnic;
 	public Text name;
 	public Text age;
 	public ToggleGroup gendergroup;
@@ -26,7 +26,14 @@ public class AddChild : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Application.platform == RuntimePlatform.Android) {
+			if (Input.GetKey (KeyCode.Escape)) {
+				// Insert Code Here (I.E. Load Scene, Etc)
+				// OR Application.Quit();
+				SceneManager.LoadScene("home");
+				return;
+			}
+		}
 	}
 
 	public void GetValues(){
@@ -35,7 +42,7 @@ public class AddChild : MonoBehaviour {
 			break;
 		}
 
-		Debug.Log ("signup pressed "+cnic.text);
+		//Debug.Log ("signup pressed "+cnic.text);
 		Debug.Log ("signup pressed "+name.text);
 		Debug.Log ("signup pressed "+g);
 		Debug.Log ("signup pressed "+age.text);
@@ -45,7 +52,7 @@ public class AddChild : MonoBehaviour {
 		WWW www;
 		WWWForm form = new WWWForm ();
 
-		form.AddField ("id", cnic.text);
+		//form.AddField ("id", cnic.text);
 		form.AddField ("uid",LoginScript.userid ); //add login id later LoginScript.userid
 		form.AddField ("name", name.text);
 		form.AddField ("gender", g);

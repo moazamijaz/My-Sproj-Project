@@ -43,6 +43,16 @@ public class managerActivity9 : MonoBehaviour {
 			Debug.Log ("move now");
 		
 		}
+
+		if (Application.platform == RuntimePlatform.Android) {
+			if (Input.GetKey (KeyCode.Escape)) {
+				// Insert Code Here (I.E. Load Scene, Etc)
+				// OR Application.Quit();
+				SceneManager.LoadScene ("Activity instructions");
+
+				return;
+			}
+		}
 	}
 
 	IEnumerator WaitForRequest(WWW data)

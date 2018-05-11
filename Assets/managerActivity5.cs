@@ -32,6 +32,15 @@ public class managerActivity5 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timer += Time.deltaTime;
+		if (Application.platform == RuntimePlatform.Android) {
+			if (Input.GetKey (KeyCode.Escape)) {
+				// Insert Code Here (I.E. Load Scene, Etc)
+				// OR Application.Quit();
+				SceneManager.LoadScene ("Activity instructions");
+
+				return;
+			}
+		}
 		
 	}
 

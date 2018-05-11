@@ -10,17 +10,32 @@ public class homescreen : MonoBehaviour {
 
 	// Use this for initialization
 	public static string userid=LoginScript.userid;
+	public GameObject infoPanel;
+	public Text info;
 	void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Application.platform == RuntimePlatform.Android) {
+			if (Input.GetKey (KeyCode.Escape)) {
+				// Insert Code Here (I.E. Load Scene, Etc)
+				// OR Application.Quit();
+				Application.Quit();
+				return;
+			}
+		}
+	}
+
+	void close(){
+		infoPanel.SetActive (false);
 	}
 
 	public void Notifications(){
-		
+		infoPanel.SetActive (true);
+		info.text = "Coming Soon!";
+		Invoke("close",2.0f);
 	}
 
 	public void AddChild(){

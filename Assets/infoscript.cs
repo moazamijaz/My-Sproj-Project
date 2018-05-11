@@ -22,7 +22,14 @@ public class infoscript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
+		if (Application.platform == RuntimePlatform.Android) {
+			if (Input.GetKey (KeyCode.Escape)) {
+				// Insert Code Here (I.E. Load Scene, Etc)
+				// OR Application.Quit();
+				SceneManager.LoadScene("View Children");
+				return;
+			}
+		}
 	}
 
 	public void GoBack(){
@@ -44,6 +51,7 @@ public class infoscript : MonoBehaviour {
 	public void loadchild(){
 		WWW www;
 		WWWForm form = new WWWForm ();
+		Debug.Log ("sending" + cid);
 		form.AddField ("id",cid); //LoginScript.userid
 		www = new WWW (POSTAddUserURL, form);
 		StartCoroutine (WaitForRequest (www));

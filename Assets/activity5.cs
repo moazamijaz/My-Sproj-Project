@@ -18,7 +18,15 @@ public class activity5 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Application.platform == RuntimePlatform.Android) {
+			if (Input.GetKey (KeyCode.Escape)) {
+				// Insert Code Here (I.E. Load Scene, Etc)
+				// OR Application.Quit();
+				SceneManager.LoadScene ("Activity instructions");
+
+				return;
+			}
+		}
 	}
 	public void GoBack(){
 		SceneManager.LoadScene (10);//do something about this
