@@ -23,11 +23,11 @@ public class activities : MonoBehaviour {
 			if (Input.GetKey (KeyCode.Escape)) {
 				// Insert Code Here (I.E. Load Scene, Etc)
 				// OR Application.Quit();
-				if (SceneManager.GetActiveScene ().Equals (SceneManager.GetSceneByName ("Activities"))) {
-					SceneManager.LoadScene ("Child info");
-				}
+
 				if (SceneManager.GetActiveScene ().Equals (SceneManager.GetSceneByName ("Activity instructions"))) {
 					SceneManager.LoadScene ("Activities");
+				} else {
+					SceneManager.LoadScene ("Child info");
 				}
 				return;
 			}
@@ -63,6 +63,7 @@ public class activities : MonoBehaviour {
 			SceneManager.LoadScene (17);
 		}
 	}
+
 	public void changeText(){
 
 		GameObject actname = GameObject.Find ("Activity Name");
