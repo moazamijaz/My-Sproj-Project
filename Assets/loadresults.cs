@@ -19,6 +19,7 @@ public class loadresults : MonoBehaviour {//THIS CLASS HAS A HARDCODED AREA BEWA
 	public static string cid = Attempts.cid;
 	public Transform myPanel;
 	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/testResults.php";
+	private List<string[]> allData=new List<string[]>();
 
 	void Start () {
 		if (length < 1) {
@@ -30,7 +31,7 @@ public class loadresults : MonoBehaviour {//THIS CLASS HAS A HARDCODED AREA BEWA
 				A_id = i;
 				WWW www;
 				WWWForm form = new WWWForm ();
-				form.AddField ("childId",1);//CHANGE THIS after!!!!!!! cid
+				form.AddField ("childId",cid);//CHANGE THIS after!!!!!!! cid
 				form.AddField ("Stid", Attempts.b_id);
 				form.AddField ("attempt", i);
 				www = new WWW (POSTAddUserURL, form);
@@ -63,11 +64,25 @@ public class loadresults : MonoBehaviour {//THIS CLASS HAS A HARDCODED AREA BEWA
 		else
 		{
 			Debug.Log("WWW Request: " + data.text);
-			Text T2 = (Text)Instantiate (Resources.Load ("Answers", typeof(Text)), myPanel);
-			T2.text ="";
 			string[] rows = data.text.Split (new[]{"<br>"},StringSplitOptions.None);
 			foreach (string row in rows) {
-				T2.text = T2.text + '\n' + row;
+				//T2.text = T2.text + '\n' + row;
+				string[] vals=row.Split('#');//vals[0],vals[1],vals[2]
+				allData.Add(vals);
+			}
+			string currAttempt = allData [0] [0];
+			Text T1=(Text)Instantiate (Resources.Load ("Attempt number", typeof(Text)), myPanel);
+			T1.text = currAttempt;
+			foreach (string[] entry in allData) {
+				if (!entry [0].Equals (currAttempt)) {
+					currAttempt = entry [0];
+					T1=(Text)Instantiate (Resources.Load ("Attempt number", typeof(Text)), myPanel);
+					T1.text = currAttempt;
+				}
+				if (entry [0].StartsWith ("Attempt")) {
+					Text T2 = (Text)Instantiate (Resources.Load ("Answers", typeof(Text)), myPanel);
+					T2.text = entry [1] + '\n' + entry [2];
+				}
 			}
 		}
 	}
