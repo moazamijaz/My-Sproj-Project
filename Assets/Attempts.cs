@@ -20,6 +20,7 @@ public class Attempts : MonoBehaviour {
 
 
 	void Start () {
+		A_number = 0;
 		Debug.Log ("button pressed!");
 	}
 	
