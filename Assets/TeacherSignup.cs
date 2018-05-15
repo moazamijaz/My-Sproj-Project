@@ -94,8 +94,50 @@ public class TeacherSignup : MonoBehaviour {
 		else
 		{
 			Debug.Log("WWW Request: " + data.text);
-			SceneManager.LoadScene ("login");
+			//SceneManager.LoadScene ("login");
 			//auto login
+			login2();
+
 		}
 	}
+
+	public void login2(){
+		WWW www;
+		WWWForm form = new WWWForm ();
+		//validate input
+		form.AddField ("password", SignUpController.userPass);
+		form.AddField ("email", SignUpController.userEmail);
+		www = new WWW ("https://autismdiagnosis.000webhostapp.com/login.php", form);
+		StartCoroutine (WaitForRequest2 (www));
+		
+	}
+
+	public void goBack(){
+		SceneManager.LoadScene ("Signup1");
+	}
+
+	IEnumerator WaitForRequest2(WWW data)
+	{
+		yield return data; // Wait until the download is done
+		Debug.Log("entered function");
+		if (data.error != null)
+		{
+			Debug.Log("There was an error sending request: " + data.error);
+			StartCoroutine (WaitForRequest (data));
+
+		}
+		else
+		{
+			Debug.Log("WWW Request2: " + data.text);
+			//SceneManager.LoadScene ("login");
+			//auto login
+			//login2();
+			string[] temp=data.text.Split(':');
+			LoginScript.userid = temp[1];
+			SceneManager.LoadScene ("home");
+
+
+		}
+	}
+	
 }

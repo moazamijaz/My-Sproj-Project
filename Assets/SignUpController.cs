@@ -20,6 +20,7 @@ public class SignUpController : MonoBehaviour {
 	public static string g;
 	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/signup.php";
 	public static string myid;
+	public static string userEmail, userPass;
 
 	// Use this for initialization
 	void Start () {
@@ -67,7 +68,9 @@ public class SignUpController : MonoBehaviour {
 		WWWForm form = new WWWForm ();
 		//validate input
 		if (MyValidate_email (email.text) != false) {
-
+			
+			userEmail = email.text;
+			userPass = password.text;
 			form.AddField ("name", name.text);
 			form.AddField ("email", email.text);
 			form.AddField ("password", password.text);
@@ -118,7 +121,7 @@ public class SignUpController : MonoBehaviour {
 		}
 	}
 
-	private bool MyValidate_email(string strToValidate)
+	public bool MyValidate_email(string strToValidate)
 	{
 		if (System.String.IsNullOrEmpty(strToValidate))
 			return false;
