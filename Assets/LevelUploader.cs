@@ -3,7 +3,7 @@ using System.Xml;
 using System.IO;
 using System.Collections;
 using System.Text;
-
+#if UNITY_EDITOR
 // a very simplistic level upload and random name generator script
 
 public class LevelUploader : MonoBehaviour
@@ -23,7 +23,9 @@ public class LevelUploader : MonoBehaviour
 		byte[] levelData =Encoding.UTF8.GetBytes(map.OuterXml);
 
 		//generate a long random file name , to avoid duplicates and overwriting
+
 		string fileName = filepanel.newpath;
+
 		fileName = fileName.Substring(0,6);
 		fileName = fileName.ToUpper();
 		fileName = fileName + ".xml";
@@ -97,3 +99,4 @@ public class LevelUploader : MonoBehaviour
 
 
 }
+#endif

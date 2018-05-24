@@ -1332,7 +1332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16a3be34cce8cb4aa75359b1cb44c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPanel: {fileID: 643835271}
+  myPanel: {fileID: 643835270}
   info: {fileID: 665148334}
 --- !u!1 &1253461532
 GameObject:

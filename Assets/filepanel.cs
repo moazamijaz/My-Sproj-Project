@@ -1,4 +1,4 @@
-﻿
+﻿#if UNITY_EDITOR
 using System.IO;
 using UnityEngine;
 using UnityEditor;
@@ -16,6 +16,7 @@ public class filepanel : MonoBehaviour {
 	void Update () {
 		
 	}
+
 	[MenuItem("Example/Overwrite Texture")]
 	static void Apply()
 	{
@@ -46,3 +47,4 @@ public class filepanel : MonoBehaviour {
 	}
 
 }
+#endif

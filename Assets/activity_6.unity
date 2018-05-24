@@ -892,7 +892,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Which of the objects is more siilar in shape to the pen?
+  m_Text: Which of the objects is more similar in shape to the pen?
 --- !u!222 &471702000
 CanvasRenderer:
   m_ObjectHideFlags: 0

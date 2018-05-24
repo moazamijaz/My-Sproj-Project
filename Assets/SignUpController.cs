@@ -181,7 +181,7 @@ public class SignUpController : MonoBehaviour {
 		WWW www;
 		WWWForm form = new WWWForm ();
 		form.AddField ("email", userEmail);
-		www = new WWW ("https://autismdiagnosis.000webhostapp.com/verify.php", form);
+		www = new WWW ("https://autismdiagnosis.000webhostapp.com/verified.php", form);
 		StartCoroutine (WaitForRequest (www));
 	}
 

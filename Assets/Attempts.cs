@@ -30,7 +30,7 @@ public class Attempts : MonoBehaviour {
 			if (Input.GetKey (KeyCode.Escape)) {
 				// Insert Code Here (I.E. Load Scene, Etc)
 				// OR Application.Quit();
-				res ();
+				SceneManager.LoadScene("results");
 			}
 		}
 	}
@@ -66,7 +66,12 @@ public class Attempts : MonoBehaviour {
 		string temp=b_id+"Result.php";
 		Debug.Log (temp);
 		if (infoscript.act==true) {
-			POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/" + "A" + t_button.name + "Result" + ".php";
+			string tapora = "";
+			if (t_button.name.EndsWith ("6")) {
+				temp="b";
+			}
+
+			POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/" + "A" + t_button.name + tapora+"Result" + ".php";
 		} else {
 			POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/attemptReturn.php";
 		}
