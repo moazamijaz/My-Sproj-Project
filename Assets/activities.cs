@@ -26,7 +26,8 @@ public class activities : MonoBehaviour {
 
 				if (SceneManager.GetActiveScene ().Equals (SceneManager.GetSceneByName ("Activity instructions"))) {
 					SceneManager.LoadScene ("Activities");
-				} else {
+				} 
+				if (SceneManager.GetActiveScene ().Equals (SceneManager.GetSceneByName ("Activities"))) {
 					SceneManager.LoadScene ("Child info");
 				}
 				return;
@@ -97,8 +98,8 @@ public class activities : MonoBehaviour {
 			ins.text= "Instructions \n" + "1- Can a Student put single, uniquely shaped puzzle pieces into a frame board?";
 		} else if (id == "10") {
 			name.text = "Activity 10";
-			des.text = " ";
-			ins.text= " ";
+			des.text = "Target Functionality: Visual performance  \n Age: 3 years and above";
+			ins.text= "Instructions \n1. Pictures of children with different emotional expressions will be displayed on screen. \n2. Ask your child to guess the emotion displayed in the picture.\n3. Click on the choice that child guessed.";
 		}
 
 	}

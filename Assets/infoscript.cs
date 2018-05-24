@@ -11,7 +11,8 @@ using System.Linq;
 public class infoscript : MonoBehaviour {
 
 	// Use this for initialization
-	public Transform myPanel;
+	public GameObject myPanel;
+	public Text info;
 	public static string cid = childrenscript.cid;
 	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/returnChildInfo.php";
 	public static bool act;
@@ -46,6 +47,17 @@ public class infoscript : MonoBehaviour {
 
 	public void loadActivities(){
 		SceneManager.LoadScene ("Activities");
+	}
+
+	public void inviteProf(){
+		//SceneManager.LoadScene ("Activities");
+		myPanel.SetActive (true);
+		info.text = "Coming Soon!";
+		Invoke("close",2.0f);
+	}
+
+	void close(){
+		myPanel.SetActive (false);
 	}
 
 	public void loadchild(){

@@ -22,7 +22,7 @@ public class activity5 : MonoBehaviour {
 			if (Input.GetKey (KeyCode.Escape)) {
 				// Insert Code Here (I.E. Load Scene, Etc)
 				// OR Application.Quit();
-				SceneManager.LoadScene ("Activity instructions");
+				SceneManager.LoadScene ("Activities");
 
 				return;
 			}

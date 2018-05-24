@@ -210,7 +210,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 148, y: 145}
+  m_AnchoredPosition: {x: -0.000015259, y: 99.64299}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &84822717
@@ -234,7 +234,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 7c930c71da51ceb45b58d10901f645c9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -280,8 +280,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25.805, y: -97.765}
-  m_SizeDelta: {x: 151.61, y: 120.4}
+  m_AnchoredPosition: {x: 13, y: -96}
+  m_SizeDelta: {x: 130.6, y: 120.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &97505744
 MonoBehaviour:
@@ -354,7 +354,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0ab738712075adb46ba918031b8337e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e5aa51bcf03db5a4091d51af391c2a39, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -402,8 +402,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 212.10007, y: -91.90004}
-  m_SizeDelta: {x: 160, y: 108.67}
+  m_AnchoredPosition: {x: 217.89998, y: -90.13504}
+  m_SizeDelta: {x: 137.8, y: 108.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &127252802
 MonoBehaviour:
@@ -445,7 +445,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 162896907}
-        m_MethodName: InCorrect
+        m_MethodName: Correct
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -663,8 +663,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -270.8, y: -91.899994}
-  m_SizeDelta: {x: 160, y: 108.67}
+  m_AnchoredPosition: {x: -198.10002, y: -90.134995}
+  m_SizeDelta: {x: 137.8, y: 108.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &220799695
 MonoBehaviour:
@@ -706,7 +706,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 162896907}
-        m_MethodName: Correct
+        m_MethodName: InCorrect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -783,8 +783,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -123, y: 161}
-  m_SizeDelta: {x: 390.07, y: 30}
+  m_AnchoredPosition: {x: -34.4, y: -11}
+  m_SizeDelta: {x: 632.7, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &293105591
 MonoBehaviour:
@@ -807,7 +807,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -818,7 +818,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select the one closest to the parrot.
+  m_Text: Which of the objects is more similar in shape to the parrot
 --- !u!222 &293105592
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -857,8 +857,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -123, y: 166}
-  m_SizeDelta: {x: 390.07, y: 30}
+  m_AnchoredPosition: {x: -33.6, y: -11.000012}
+  m_SizeDelta: {x: 632.7, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &471701999
 MonoBehaviour:
@@ -881,7 +881,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -892,7 +892,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select the one closest to the pen.
+  m_Text: Which of the objects is more siilar in shape to the pen?
 --- !u!222 &471702000
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1007,8 +1007,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -270.8, y: -91.899994}
-  m_SizeDelta: {x: 160, y: 108.67}
+  m_AnchoredPosition: {x: -198.10002, y: -90.134995}
+  m_SizeDelta: {x: 137.8, y: 108.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &623575072
 MonoBehaviour:
@@ -1129,8 +1129,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25, y: -104}
-  m_SizeDelta: {x: 129.55, y: 96.81}
+  m_AnchoredPosition: {x: 13.599987, y: -102.235}
+  m_SizeDelta: {x: 111.6, y: 96.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &656761283
 MonoBehaviour:
@@ -1456,8 +1456,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 135}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -15, y: 107}
+  m_SizeDelta: {x: 195.6, y: 155.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &846116631
 MonoBehaviour:
@@ -1672,8 +1672,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -123, y: 164}
-  m_SizeDelta: {x: 390.07, y: 30}
+  m_AnchoredPosition: {x: -34.4, y: -10.999993}
+  m_SizeDelta: {x: 632.7, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028830240
 MonoBehaviour:
@@ -1696,10 +1696,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1707,7 +1707,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select the one closest to the apple.
+  m_Text: Which of the objects is more similar in colour to the apple?
 --- !u!222 &1028830241
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1822,8 +1822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21, y: -104.42}
-  m_SizeDelta: {x: 166.5, y: 133.7}
+  m_AnchoredPosition: {x: 17.099987, y: -102.655}
+  m_SizeDelta: {x: 143.4, y: 133.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1157211828
 MonoBehaviour:
@@ -2056,8 +2056,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 212.10007, y: -91.90004}
-  m_SizeDelta: {x: 160, y: 108.67}
+  m_AnchoredPosition: {x: 217.89998, y: -90.13504}
+  m_SizeDelta: {x: 137.8, y: 108.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1291617226
 MonoBehaviour:
@@ -2178,8 +2178,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -270.8, y: -91.899994}
-  m_SizeDelta: {x: 160, y: 108.67}
+  m_AnchoredPosition: {x: -198.10002, y: -90.134995}
+  m_SizeDelta: {x: 137.8, y: 108.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1350555479
 MonoBehaviour:
@@ -2300,8 +2300,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 212.10007, y: -91.90004}
-  m_SizeDelta: {x: 160, y: 108.67}
+  m_AnchoredPosition: {x: 217.89998, y: -90.13504}
+  m_SizeDelta: {x: 137.8, y: 108.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1401075120
 MonoBehaviour:
@@ -2824,8 +2824,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 152, y: 138}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.0000047684, y: 110}
+  m_SizeDelta: {x: 120.95, y: 116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2031453931
 MonoBehaviour:
@@ -2848,7 +2848,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 844c619c0a7c77448b09d5e34c4f629e, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2963,11 +2963,11 @@ RectTransform:
   m_Father: {fileID: 1755757267}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -355.56003, y: 210.4}
-  m_SizeDelta: {x: 80.2, y: 24.1}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -355.56003, y: 2.4500122}
+  m_SizeDelta: {x: 80.2, y: 24.100006}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2062912236
 MonoBehaviour:
   m_ObjectHideFlags: 0

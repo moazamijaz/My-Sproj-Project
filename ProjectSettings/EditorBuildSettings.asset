@@ -83,3 +83,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Activities results display.unity
     guid: 997148fbbd390f44bbcf8b2d8c076c6b
+  - enabled: 1
+    path: Assets/cameraScene.unity
+    guid: 1f4862bc35008354a84e6e3a6f66e6f1
+  - enabled: 1
+    path: Assets/verifyScreen.unity
+    guid: a7b63a00e9329014fbab488b33ba4299

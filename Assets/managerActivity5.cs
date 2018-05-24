@@ -102,7 +102,7 @@ public class managerActivity5 : MonoBehaviour {
 				T1.transform.position = Tgroup.transform.position + temp;
 				T1.group = Tgroup;
 				T1.name = "Yes";
-				temp = new Vector3 (0, -30, 0);
+				temp = new Vector3 (200, 0, 0);
 				Toggle T2 = (Toggle)Instantiate (Resources.Load ("myToggle", typeof(Toggle)), myPanel);
 				T2.transform.position = Tgroup.transform.position + temp;
 				T2.group = Tgroup;
@@ -145,7 +145,7 @@ public class managerActivity5 : MonoBehaviour {
 				T1.transform.position = Tgroup.transform.position + temp;
 				T1.group = Tgroup;
 				T1.name = "Yes";
-				temp = new Vector3 (0, -30, 0);
+				temp = new Vector3 (200, 0, 0);
 				Toggle T2 = (Toggle)Instantiate (Resources.Load ("myToggle", typeof(Toggle)), myPanel);
 				T2.transform.position = Tgroup.transform.position + temp;
 				T2.group = Tgroup;
@@ -189,7 +189,7 @@ public class managerActivity5 : MonoBehaviour {
 				T1.transform.position = Tgroup.transform.position + temp;
 				T1.group = Tgroup;
 				T1.name = "Yes";
-				temp = new Vector3 (0, -30, 0);
+				temp = new Vector3 (200, 0, 0);
 				Toggle T2 = (Toggle)Instantiate (Resources.Load ("myToggle", typeof(Toggle)), myPanel);
 				T2.transform.position = Tgroup.transform.position + temp;
 				T2.group = Tgroup;

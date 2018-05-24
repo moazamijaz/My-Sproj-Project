@@ -15,6 +15,10 @@ public class TeacherSignup : MonoBehaviour {
 	public Text schoolName;
 	public Text occupation;
 	public Text income;
+	public GameObject errorPanel;
+	public Text infoText;
+	public GameObject errorText;
+
 	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/TeacherInfo.php";
 	private static readonly string POSTAddUserURL2 = "https://autismdiagnosis.000webhostapp.com/ParentsInfo.php";
 	// Use this for initialization
@@ -88,13 +92,21 @@ public class TeacherSignup : MonoBehaviour {
 		if (data.error != null)
 		{
 			Debug.Log("There was an error sending request: " + data.error);
-			StartCoroutine (WaitForRequest (data));
+			errorPanel.SetActive (true);
+			errorText.SetActive (true);
+			infoText.text="There was an error sending request: " + data.error;
+			Invoke ("close", 3.0f);
+			//StartCoroutine (WaitForRequest (data));
 
 		}
 		else
 		{
 			Debug.Log("WWW Request: " + data.text);
-			//SceneManager.LoadScene ("login");
+			SceneManager.LoadScene ("login");
+			errorPanel.SetActive (true);
+			errorText.SetActive (false);
+			infoText.text=data.text;
+			Invoke ("close", 3.0f);
 			//auto login
 			login2();
 
@@ -124,6 +136,10 @@ public class TeacherSignup : MonoBehaviour {
 		{
 			Debug.Log("There was an error sending request: " + data.error);
 			StartCoroutine (WaitForRequest (data));
+			errorPanel.SetActive (true);
+			errorText.SetActive (true);
+			infoText.text="There was an error sending request: " + data.error;
+			Invoke ("close", 3.0f);
 
 		}
 		else
@@ -132,6 +148,10 @@ public class TeacherSignup : MonoBehaviour {
 			//SceneManager.LoadScene ("login");
 			//auto login
 			//login2();
+			errorPanel.SetActive (true);
+			errorText.SetActive (false);
+			infoText.text= data.text;
+			Invoke ("close", 3.0f);
 			string[] temp=data.text.Split(':');
 			LoginScript.userid = temp[1];
 			SceneManager.LoadScene ("home");

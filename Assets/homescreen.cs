@@ -46,11 +46,10 @@ public class homescreen : MonoBehaviour {
 		SceneManager.LoadScene ("View Children");
 	}
 
-	public void AccountSettings(){
-
-	}
 
 	public void Settings(){
-
+		infoPanel.SetActive (true);
+		info.text = "Coming Soon!";
+		Invoke("close",2.0f);
 	}
 }

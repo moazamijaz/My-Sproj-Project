@@ -15,12 +15,16 @@ public class SignUpController : MonoBehaviour {
 	public Text telephone;
 	public ToggleGroup gendergroup;
 	public ToggleGroup rolegroup;
+	public GameObject errorPanel;
+	public Text infoText;
+	public GameObject errorText;
 
-	public string role;
+	public static string role;
 	public static string g;
 	private static readonly string POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/signup.php";
 	public static string myid;
-	public static string userEmail, userPass;
+	public static string userEmail;
+	public static string userPass, userName, userAge, userTel;
 
 	// Use this for initialization
 	void Start () {
@@ -55,38 +59,12 @@ public class SignUpController : MonoBehaviour {
 			g = item.name;
 			break;
 		}
-		Debug.Log ("signup pressed "+name.text);
-		Debug.Log ("signup pressed "+email.text);
-		Debug.Log ("signup pressed "+password.text);
-		Debug.Log ("signup pressed "+g);
-		Debug.Log ("signup pressed "+age.text);
-		Debug.Log ("signup pressed "+telephone.text);
-		Debug.Log ("signup pressed "+role);
-
-		//web request
-		WWW www;
-		WWWForm form = new WWWForm ();
-		//validate input
-		if (MyValidate_email (email.text) != false) {
-			
-			userEmail = email.text;
-			userPass = password.text;
-			form.AddField ("name", name.text);
-			form.AddField ("email", email.text);
-			form.AddField ("password", password.text);
-			form.AddField ("gender", g);
-			form.AddField ("age", age.text);
-			form.AddField ("telephone", telephone.text);
-			form.AddField ("role", role);
-			www = new WWW (POSTAddUserURL, form);
-			StartCoroutine (WaitForRequest (www));
-			
-		} else {
-			Debug.Log ("Invalid email");
-		}
-			
-		//
-
+		userName = name.text;
+		userEmail = email.text;
+		userPass = password.text;
+		userAge = age.text;
+		userTel = telephone.text;
+		mySubmitForm ();
 	}
 
 	IEnumerator WaitForRequest(WWW data)
@@ -95,29 +73,65 @@ public class SignUpController : MonoBehaviour {
 		if (data.error != null)
 		{
 			Debug.Log("There was an error sending request: " + data.error);
-			StartCoroutine (WaitForRequest (data));
+			//StartCoroutine (WaitForRequest (data));
+			
+			errorPanel.SetActive (true);
+			errorText.SetActive (true);
+			infoText.text="There was an error sending request: " + data.error;
+			Invoke ("close", 3.0f);
 
 		}
 		else
 		{
 			Debug.Log("WWW Request: " + data.text);
 			//find id in text
-			myid = Get_id (data);
-			Debug.Log (myid);
+			//myid = Get_id (data);
+			//Debug.Log (myid);
 			//change to next screen
-			Debug.Log (role);
-			if (role == "Teacher") {
-				//load teacher screen
 
-				SceneManager.LoadScene("Teacher Signup");
+
+			Debug.Log (role);
+			if (data.text.EndsWith ("sent")) {
+				errorPanel.SetActive (true);
+				errorText.SetActive (false);
+				infoText.text=data.text;
+				infoText.text = infoText.text + ".Please check your email to verify and press "+'"'+"Proceed"+'"'+" when done.";
+				Invoke ("close", 3.0f);
+				SceneManager.LoadScene ("verifyScreen");
+
+				
+			} else if(data.text.EndsWith ("Please verify email")){
+				errorPanel.SetActive (true);
+				errorText.SetActive (false);
+
+				infoText.text = "Verification email sent. Please check email to verify and press "+'"'+"Proceed"+'"'+" when done.";
+				Invoke ("close", 3.0f);
+				
+			} else if(data.text.EndsWith ("confirmed")){
+				errorPanel.SetActive (true);
+				errorText.SetActive (true);
+				infoText.text= "User already exists";
+				Invoke ("close", 3.0f);
+			} else if(data.text.StartsWith("id")){
+				string[] temp = data.text.Split (':');
+				myid = temp [1];
+				if (role == "Teacher") {
+					//load teacher screen
+					SceneManager.LoadScene ("Teacher Signup");
+				} else if (role == "Parent") {
+					//load parent screen
+					SceneManager.LoadScene ("Parent Signup");
+				}
+				if (role == "Medical Professional") {
+					//load medical screen
+				}
+			} else {
+				errorPanel.SetActive (true);
+				errorText.SetActive (true);
+				infoText.text= data.text;
+				Invoke ("close", 3.0f);
 			}
-			else if (role == "Parent") {
-				//load parent screen
-				SceneManager.LoadScene("Parent Signup");
-			}
-			if (role == "Medical Professional") {
-				//load medical screen
-			}
+
 		}
 	}
 
@@ -156,11 +170,53 @@ public class SignUpController : MonoBehaviour {
 		return rv;
 	}
 
-	/*
-	private bool MyValidate_gender(string strToValidate)
-	{
-		return strToValidate=="Male"||strToValidate=="Female"||strToValidate=="Other"
-			||strToValidate=="male"||strToValidate=="female"||strToValidate=="other";
+	void close(){
+		errorPanel.SetActive (false);
+		errorText.SetActive (false);
+
 	}
-	*/
+
+	public void verify(){
+		Debug.Log ("signup pressed "+userEmail);
+		WWW www;
+		WWWForm form = new WWWForm ();
+		form.AddField ("email", userEmail);
+		www = new WWW ("https://autismdiagnosis.000webhostapp.com/verify.php", form);
+		StartCoroutine (WaitForRequest (www));
+	}
+
+	public void mySubmitForm(){
+
+		Debug.Log ("signup pressed "+name.text);
+		Debug.Log ("signup pressed "+email.text);
+		Debug.Log ("signup pressed "+password.text);
+		Debug.Log ("signup pressed "+g);
+		Debug.Log ("signup pressed "+age.text);
+		Debug.Log ("signup pressed "+telephone.text);
+		Debug.Log ("signup pressed "+role);
+
+		//web request
+		WWW www;
+		WWWForm form = new WWWForm ();
+		//validate input
+		if (MyValidate_email (email.text) != false) {
+			form.AddField ("name", userName);
+			form.AddField ("email", userEmail);
+			form.AddField ("password", userPass);
+			form.AddField ("gender", g);
+			form.AddField ("age", userAge);
+			form.AddField ("telephone", userTel);
+			form.AddField ("role", role);
+			www = new WWW (POSTAddUserURL, form);
+			StartCoroutine (WaitForRequest (www));
+
+		} else {
+			Debug.Log ("Invalid email");
+			errorPanel.SetActive (true);
+			errorText.SetActive (true);
+			infoText.text="Invalid Email";
+			Invoke ("close", 3.0f);
+		}
+
+	}
 }
