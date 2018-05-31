@@ -27,7 +27,6 @@ public class managerActivity9 : MonoBehaviour {
 	void Update () {
 		if (count == 5) {
 			//submit the score here
-			response = response + "]";
 			Debug.Log ("Response: " + response);
 			WWW www;
 			WWWForm form = new WWWForm ();
@@ -43,8 +42,6 @@ public class managerActivity9 : MonoBehaviour {
 			//and move the scene to menu
 			Debug.Log ("move now");
 		
-		} else if (count > 0) {
-			response = response + ',';
 		}
 
 		if (Application.platform == RuntimePlatform.Android) {

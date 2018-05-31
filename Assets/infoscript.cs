@@ -63,8 +63,9 @@ public class infoscript : MonoBehaviour {
 	public void loadchild(){
 		WWW www;
 		WWWForm form = new WWWForm ();
-		Debug.Log ("sending" + cid);
-		form.AddField ("id",cid); //LoginScript.userid
+		cid = childrenscript.cid;
+		Debug.Log ("sending" + childrenscript.cid);
+		form.AddField ("id",childrenscript.cid); //LoginScript.userid
 		www = new WWW (POSTAddUserURL, form);
 		StartCoroutine (WaitForRequest (www));
 	}

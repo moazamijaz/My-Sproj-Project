@@ -498,7 +498,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.36, y: 0.5}
+  m_Size: {x: 0.65, y: 0.65}
   m_EdgeRadius: 0
 --- !u!114 &710904115
 MonoBehaviour:
@@ -511,7 +511,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93584d5f61f79ca4ab3f4778b4fdeb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  red: {fileID: 21300000, guid: 51cfdb19da068a1488b80404812423c1, type: 3}
 --- !u!212 &710904116
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -873,7 +872,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.36, y: 0.5}
+  m_Size: {x: 0.65, y: 0.65}
   m_EdgeRadius: 0
 --- !u!114 &1341245852
 MonoBehaviour:
@@ -886,7 +885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93584d5f61f79ca4ab3f4778b4fdeb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  red: {fileID: 21300006, guid: 51cfdb19da068a1488b80404812423c1, type: 3}
 --- !u!212 &1341245853
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -985,7 +983,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.36, y: 0.5}
+  m_Size: {x: 0.65, y: 0.65}
   m_EdgeRadius: 0
 --- !u!114 &1379356152
 MonoBehaviour:
@@ -998,7 +996,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93584d5f61f79ca4ab3f4778b4fdeb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  red: {fileID: 21300002, guid: 51cfdb19da068a1488b80404812423c1, type: 3}
 --- !u!212 &1379356153
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1097,7 +1094,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.36, y: 0.5}
+  m_Size: {x: 0.65, y: 0.65}
   m_EdgeRadius: 0
 --- !u!114 &1632520590
 MonoBehaviour:
@@ -1110,7 +1107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93584d5f61f79ca4ab3f4778b4fdeb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  red: {fileID: 21300004, guid: 51cfdb19da068a1488b80404812423c1, type: 3}
 --- !u!212 &1632520591
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1242,7 +1238,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.36, y: 0.5}
+  m_Size: {x: 0.65, y: 0.65}
   m_EdgeRadius: 0
 --- !u!114 &1772238432
 MonoBehaviour:
@@ -1255,7 +1251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93584d5f61f79ca4ab3f4778b4fdeb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  red: {fileID: 21300008, guid: 51cfdb19da068a1488b80404812423c1, type: 3}
 --- !u!212 &1772238433
 SpriteRenderer:
   m_ObjectHideFlags: 0

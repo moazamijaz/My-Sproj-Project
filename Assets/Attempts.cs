@@ -68,7 +68,7 @@ public class Attempts : MonoBehaviour {
 		if (infoscript.act==true) {
 			string tapora = "";
 			if (t_button.name.EndsWith ("6")) {
-				temp="b";
+				tapora="b";
 			}
 
 			POSTAddUserURL = "https://autismdiagnosis.000webhostapp.com/" + "A" + t_button.name + tapora+"Result" + ".php";

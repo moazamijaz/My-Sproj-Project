@@ -71,7 +71,7 @@ public class childrenscript : MonoBehaviour {
 						cid = kaam [1];
 					}
 					else if (temp.EndsWith("name")) {
-						GameObject name = GameObject.Find (cid);
+						GameObject name = GameObject.Find(cid);
 						Text[] textlist = name.GetComponentsInChildren<Text> ();
 						textlist [0].text = kaam [1];
 						Debug.Log ("name: "+textlist[0].text);
